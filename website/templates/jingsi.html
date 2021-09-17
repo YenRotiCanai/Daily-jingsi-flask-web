@@ -1,0 +1,19 @@
+{% extends "base.html" %}{% block title %}Jingsi{% endblock %} {% block content
+%}
+<h1 align="center">今日靜思語</h1>
+<br />
+<div class="card">
+  <div class="card-body">
+    <h2 align="center">
+      {% autoescape false %} {{ jingsi_text }} {% endautoescape %}
+    </h2>
+  </div>
+</div>
+<br />
+<form method="POST">
+  <div align="center">
+    <button type="submit" class="btn btn-primary">抽一句</button>
+  </div>
+</form>
+
+{% endblock %}
